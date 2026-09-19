@@ -30,3 +30,31 @@ MiniSupermarketSystem/
 │
 └── MiniSupermarket.WinForms/     # Dự án Windows Forms (Frontend Client)
     └── FormCategoryManagement.cs # Giao diện quản lý danh mục CRUD
+
+
+🚀 4. Hướng dẫn Chạy và Kiểm thử Dự án
+Bước 1: Chạy phía Backend (Web API)
+Mở Solution bằng Visual Studio 2022.
+
+
+Nhấp chuột phải vào project MiniSupermarket.API chọn Set as Startup Project.
+
+
+Nhấn F5 để chạy. Trình duyệt sẽ tự động mở giao diện Swagger UI để kiểm tra các phương thức GET, POST, PUT, DELETE.
+
+
+Bước 2: Chạy phía Frontend (WinForms Client)
+Đảm bảo cổng (Port) trong ApiClientService hoặc HttpClient của WinForms khớp với cổng https://localhost:XXXXX của Web API đang chạy.
+
+Nhấp chuột phải vào project MiniSupermarket.WinForms chọn Debug -> Start new instance.
+
+Thử nghiệm các chức năng: Tải danh sách, Thêm mới, Sửa, Xóa và Tìm kiếm nhóm hàng.
+
+👨‍💻 5. Tác giả
+Họ tên sinh viên: Nguyễn Lê Chí Công
+
+
+Mã sinh viên: 2124110094
+
+
+Lớp học phần: CCQ2411C
