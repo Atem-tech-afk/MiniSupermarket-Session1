@@ -1,20 +1,42 @@
+Ôªøusing Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// ThÍm Controllers v‡ d?ch v? Swagger Gen
+// C·∫•u h√¨nh d·ªãch v·ª• x√°c th·ª±c JWT Bearer
+var jwtSecret = builder.Configuration["JwtSettings:Secret"] ?? "SupermarketSecretKeyDoAnMonHoc2026SecureString!!";
+builder.Services.AddAuthentication(options => {
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options => {
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtSecret)),
+        ValidateIssuer = false,
+        ValidateAudience = false
+    };
+});
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(); // B?t bu?c ph?i cÛ dÚng n‡y
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// C?u hÏnh s? d?ng Swagger ? mÙi tr??ng ph·t tri?n
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(); // B?t bu?c ph?i cÛ dÚng n‡y ?? b?t giao di?n web
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
+
+// B·∫Øt bu·ªôc g·ªçi UseAuthentication tr∆∞·ªõc UseAuthorization
+app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapControllers();
 app.Run();
