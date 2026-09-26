@@ -57,8 +57,9 @@ namespace MiniSupermarket.API.Controllers
             return Ok(ressult);
         }
 
-        //4.CREATE: Thêm mới nhóm hàng (POST/api/categories)
+        //4.CREATE: Thêm mới nhóm hàng (POST/api/categories) - Chỉ Admin được phép
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create([FromBody] Category newCat)
         {
             if (string.IsNullOrWhiteSpace(newCat.CategoryName))
@@ -71,12 +72,13 @@ namespace MiniSupermarket.API.Controllers
             //Trả về mã 201 Created kèm đường dẫn tới bản ghi mới tạo
             return CreatedAtAction(nameof(GetById), new { id = newCat.CategoryId }, newCat);
         }
-        //5.UPDATE: Cập nhật thông tin nhóm hàng(PUT/api/categories/{id})
+        //5.UPDATE: Cập nhật thông tin nhóm hàng(PUT/api/categories/{id}) - Chỉ Admin được phép
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(int id, [FromBody] Category updateCat)
         {
             var cat = _categories.FirstOrDefault(c => c.CategoryId == id);
-            if(cat == null)
+            if (cat == null)
             {
                 return NotFound(new { message = "Không tìm thấy nhóm hàng cần sửa!" });
             }
@@ -88,8 +90,9 @@ namespace MiniSupermarket.API.Controllers
             return NoContent();
         }
 
-        // 6. DELETE: Xóa nhóm hàng theo ID (DELETE /api/categories/{id})
+        // 6. DELETE: Xóa nhóm hàng theo ID (DELETE /api/categories/{id}) - Chỉ Admin được phép
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             var cat = _categories.FirstOrDefault(c => c.CategoryId == id);
@@ -102,7 +105,7 @@ namespace MiniSupermarket.API.Controllers
         }
         // 7. Kiểm tra quyền Admin (Chỉ tài khoản có Role = Admin mới được gọi)
         [HttpGet("admin-dashboard")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")] 
         public IActionResult GetAdminDashboard()
         {
             return Ok(new { message = "Chào mừng Admin! Bạn có toàn quyền quản trị hệ thống siêu thị mini." });

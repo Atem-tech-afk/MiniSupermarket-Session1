@@ -125,7 +125,7 @@
             groupBox3.Margin = new Padding(3, 4, 3, 4);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(3, 4, 3, 4);
-            groupBox3.Size = new Size(253, 415);
+            groupBox3.Size = new Size(308, 415);
             groupBox3.TabIndex = 6;
             groupBox3.TabStop = false;
             groupBox3.Text = "Thông tin Nhóm hàng";
@@ -135,18 +135,18 @@
             btnAdd.Location = new Point(7, 260);
             btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(74, 31);
+            btnAdd.Size = new Size(96, 31);
             btnAdd.TabIndex = 8;
-            btnAdd.Text = "Thêm";
+            btnAdd.Text = "Thêm mới";
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += btnAdd_Click;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(88, 260);
+            btnUpdate.Location = new Point(109, 260);
             btnUpdate.Margin = new Padding(3, 4, 3, 4);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(74, 31);
+            btnUpdate.Size = new Size(108, 31);
             btnUpdate.TabIndex = 9;
             btnUpdate.Text = "Cập nhật";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(169, 260);
+            btnDelete.Location = new Point(223, 260);
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(74, 31);
@@ -168,7 +168,7 @@
             txtDescription.Location = new Point(7, 200);
             txtDescription.Margin = new Padding(3, 4, 3, 4);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(237, 27);
+            txtDescription.Size = new Size(290, 27);
             txtDescription.TabIndex = 7;
             // 
             // label5
@@ -195,7 +195,7 @@
             txtCategoryName.Location = new Point(7, 127);
             txtCategoryName.Margin = new Padding(3, 4, 3, 4);
             txtCategoryName.Name = "txtCategoryName";
-            txtCategoryName.Size = new Size(237, 27);
+            txtCategoryName.Size = new Size(290, 27);
             txtCategoryName.TabIndex = 4;
             // 
             // label3
@@ -223,7 +223,7 @@
             txtId.Margin = new Padding(3, 4, 3, 4);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
-            txtId.Size = new Size(238, 27);
+            txtId.Size = new Size(290, 27);
             txtId.TabIndex = 1;
             // 
             // label1
@@ -239,7 +239,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(1001, 600);
             Controls.Add(groupBox3);
             Controls.Add(txtKeyword);
             Controls.Add(groupBox1);
