@@ -50,8 +50,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -60,14 +68,10 @@
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "C:\\Users\\Lenovo IdeaPad\\Desktop\\MiniSupermarket.API\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAcwGcAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwD8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2026-09-26T10:26:01.123Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
@@ -163,8 +167,7 @@
               "RelativeToolTip": "MiniSupermarket.WinForms\\FormCategoryManagement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-19T12:05:14.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-19T12:05:14.648Z"
             },
             {
               "$type": "Document",
