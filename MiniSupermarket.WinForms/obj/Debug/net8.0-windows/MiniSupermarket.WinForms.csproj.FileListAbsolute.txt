@@ -60,3 +60,4 @@ C:\Users\Lenovo IdeaPad\Desktop\MiniSupermarket.API\MiniSupermarket.WinForms\bin
 C:\Users\Lenovo IdeaPad\Desktop\MiniSupermarket.API\MiniSupermarket.WinForms\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Lenovo IdeaPad\Desktop\MiniSupermarket.API\MiniSupermarket.WinForms\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Lenovo IdeaPad\Desktop\MiniSupermarket.API\MiniSupermarket.WinForms\obj\Debug\net8.0-windows\MiniSupermarket.WinForms.LoginResponseDto.resources
+C:\Users\Lenovo IdeaPad\Desktop\MiniSupermarket.API\MiniSupermarket.WinForms\obj\Debug\net8.0-windows\MiniSupermarket.WinForms.FormCustomerManagement.resources

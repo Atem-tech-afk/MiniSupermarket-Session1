@@ -1,13 +1,25 @@
-﻿namespace MiniSupermarket.API.Models
-    //Lớp biểu diễn thực thể Nhóm Hàng hóa trong siêu thi mini
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+
+namespace MiniSupermarket.API.Models
 {
+    [Table("Categories")]
     public class Category
     {
-        //Mã định danh nhóm hàng(Khóa chính)
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryId { get; set; }
-        //Tên hóm hàng (Bắt buộc, không được để trống)
-        public string CategoryName {  get; set; }=string.Empty;
-        //Mô tả chi tiết về nhóm hàng (Có thể để trống)
+
+        [Required(ErrorMessage = "Tên nhóm hàng không được để trống!")]
+        [StringLength(100, ErrorMessage = "Tên nhóm hàng không vượt quá 100 ký tự")]
+        public string CategoryName { get; set; } = string.Empty;
+
+        [StringLength(255)]
         public string? Description { get; set; }
+
+        // Quan hệ 1 - N
+        [JsonIgnore]
+        public virtual ICollection<Product>? Products { get; set; }
     }
 }
